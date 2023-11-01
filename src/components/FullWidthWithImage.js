@@ -2,6 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import heroImg from '../images/gabin-vallet-J154nEkpzlQ-unsplash.jpg';
 
 import Header, { LogoLink, NavLinks, NavLink as NavLinkBase } from "./light.js";
 
@@ -20,7 +21,7 @@ const Container = tw.div`relative -mx-8 -mt-8`;
 const TwoColumn = tw.div`flex flex-col lg:flex-row bg-gray-100`;
 const LeftColumn = tw.div`ml-8 mr-8 xl:pl-10 py-8`;
 const RightColumn = styled.div`
-  background-image: url("https://images.unsplash.com/photo-1551918120-9739cb430c6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&width=1440&height=1024&q=75");
+  background-image: url(${heroImg});
   ${tw`bg-green-500 bg-cover bg-center xl:ml-24 h-96 lg:h-auto lg:w-1/2 lg:flex-1`}
 `;
 
@@ -34,50 +35,34 @@ const Actions = styled.div`
     ${tw`text-center inline-block w-full sm:w-48 py-4 font-semibold tracking-wide rounded hocus:outline-none focus:shadow-outline transition duration-300`}
   }
   .primaryAction {
-    ${tw`bg-primary-500 text-gray-100 hover:bg-primary-700`}
-  }
-  .secondaryAction {
-    ${tw`mt-4 sm:mt-0 sm:ml-4 bg-gray-300 text-gray-700 hover:bg-gray-400 hover:text-gray-800`}
+    ${tw`bg-blue-500 text-gray-100 hover:bg-blue-700`}
   }
 `;
 
 export default ({
-  navLinks = [
-    <NavLinks key={1}>
-      <NavLink href="#">About</NavLink>
-      <NavLink href="#">Blog</NavLink>
-      <NavLink href="#">Pricing</NavLink>
-      <NavLink href="#">Login</NavLink>
-    </NavLinks>
-  ],
   heading = (
     <>
-      Find Perfect Hotels
+      Transforming Lives
       <wbr />
       <br />
-      <span tw="text-primary-500">anywhere you go.</span>
+      <span tw="text-blue-500">One Workout at a Time.</span>
     </>
   ),
-  description = "We've been in the hotels business across the world for 5 years now. We assure you that you will always enjoy your stay with us.",
+  description = "Our personalized programs and expert guidance empower you to achieve your fitness goals. Join us on a journey to a healthier, stronger, and happier you.",
   primaryActionUrl = "#",
-  primaryActionText = "Sign Up",
-  secondaryActionUrl = "#",
-  secondaryActionText = "Search Hotels"
+  primaryActionText = "Sign Up"
 }) => {
   return (
     <Container>
       <TwoColumn>
         <LeftColumn>
-          <StyledHeader links={navLinks} collapseBreakpointClass="sm" />
+          <StyledHeader collapseBreakpointClass="sm" />
           <Content>
             <Heading>{heading}</Heading>
             <Paragraph>{description}</Paragraph>
             <Actions>
               <a href={primaryActionUrl} className="action primaryAction">
                 {primaryActionText}
-              </a>
-              <a href={secondaryActionUrl} className="action secondaryAction">
-                {secondaryActionText}
               </a>
             </Actions>
           </Content>

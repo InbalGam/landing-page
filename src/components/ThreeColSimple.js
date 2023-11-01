@@ -5,10 +5,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "./Headings.js";
 import { SectionDescription } from "./Typography.js";
 import { Container, ContentWithPaddingXl } from "./Layouts.js";
-import { ReactComponent as ArrowRightIcon } from "../images/arrow-right-icon.svg";
-import SupportIconImage from "../images/support-icon.svg";
-import ShieldIconImage from "../images/shield-icon.svg";
-import CustomizeIconImage from "../images/customize-icon.svg";
+import blueStar from "../images/blue-star-icon.png";
 import { ReactComponent as SvgDecoratorBlob3 } from "../images/svg-decorator-blob-3.svg";
 
 const Heading = tw(SectionHeading)``;
@@ -22,7 +19,7 @@ const Column = styled.div`
 `;
 
 const Card = styled.a`
-  ${tw`flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105 `}
+  ${tw`flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 transform`}
   .imageContainer {
     ${tw`text-center rounded-full p-4 bg-gray-100`}
     img {
@@ -39,7 +36,7 @@ const Card = styled.a`
   }
 
   .link {
-    ${tw`mt-auto inline-flex items-center pt-5 text-sm font-bold text-primary-300 leading-none hocus:text-primary-900 transition duration-300`}
+    ${tw`mt-auto inline-flex items-center pt-5 text-sm font-bold text-primary-300 leading-none transition duration-300`}
     .icon {
       ${tw`ml-2 w-4`}
     }
@@ -53,25 +50,21 @@ const DecoratorBlob = styled(SvgDecoratorBlob3)`
 export default ({
   cards = [
     {
-      imageSrc: ShieldIconImage,
-      title: "Secure",
-      description: "We strictly only deal with vendors that provide top notch security.",
-      url: "https://timerse.com"
+      imageSrc: blueStar,
+      title: "Personalized Programs",
+      description: "We offer personalized workout routines, nutrition plans, and coaching to help you achieve better results."
     },
     {
-      imageSrc: SupportIconImage,
-      title: "24/7 Support",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://google.com"
+      imageSrc: blueStar,
+      title: "Online Classes",
+      description: "We offer virtual workouts, coaching, and support through our fitness app and website."
     },
     {
-      imageSrc: CustomizeIconImage,
-      title: "Customizable",
-      description: "Lorem ipsum donor amet siti ceali placeholder text",
-      url: "https://reddit.com"
+      imageSrc: blueStar,
+      title: "Health and Wellness",
+      description: "We provide information on nutrition, stress, sleep, and other lifestyle factors that impact your fitness."
     }
   ],
-  linkText = "Learn More",
   heading = "",
   subheading = "",
   description = "",
@@ -94,18 +87,12 @@ export default ({
         <ThreeColumnContainer>
           {cards.map((card, i) => (
             <Column key={i}>
-              <Card href={card.url}>
+              <Card>
                 <span className="imageContainer" css={imageContainerCss}>
                   <img src={card.imageSrc} alt="" css={imageCss} />
                 </span>
                 <span className="title">{card.title}</span>
                 <p className="description">{card.description}</p>
-                {linkText && (
-                  <span className="link">
-                    <span>{linkText}</span>
-                    <ArrowRightIcon className="icon" />
-                  </span>
-                )}
               </Card>
             </Column>
           ))}

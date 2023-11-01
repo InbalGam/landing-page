@@ -13,17 +13,17 @@ import Footer from "./components/MiniCenteredFooter.js";
 function App() {
   return (
     <AnimationRevealPage>
-    <Hero />
-    <Features />
-    <SliderCard />
-    <TrendingCard />
-    <MainFeature />
-    <Blog />
-    <Testimonial textOnLeft={true}/>
-    <FAQ />
-    <SubscribeNewsLetterForm />
-    <Footer />
-  </AnimationRevealPage>
+      <Hero />
+      <Features />
+      <SliderCard />
+      <TrendingCard />
+      <MainFeature />
+      <Blog />
+      <Testimonial textOnLeft={true} />
+      <FAQ />
+      <SubscribeNewsLetterForm />
+      <Footer />
+    </AnimationRevealPage>
   );
 }
 
