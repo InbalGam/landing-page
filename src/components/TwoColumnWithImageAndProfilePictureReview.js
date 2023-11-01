@@ -11,6 +11,8 @@ import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chev
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "../images/svg-decorator-blob-4.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "../images/svg-decorator-blob-5.svg";
+import yogaImg from '../images/logan-weaver-lgnwvr-amgv9YUg-MA-unsplash.jpg';
+import hiitImg from '../images/sam-sabourin-PiFA6HIAfBA-unsplash.jpg';
 
 import "slick-carousel/slick/slick.css";
 
@@ -68,7 +70,7 @@ const DecoratorBlob2 = tw(
 export default ({
   subheading = "",
   heading = "Testimonials",
-  description = "Here are what some of our amazing customers are saying about our hotels & tours. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description = "Here are what some of our amazing trainers are saying about our workouts.",
   testimonials = null,
   textOnLeft = false
 }) => {
@@ -78,24 +80,22 @@ export default ({
    */
   const defaultTestimonials = [
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1512100356356-de1b84283e18?ixlib=rb-1.2.1&auto=format&fit=crop&w=1024&q=80",
+      imageSrc: yogaImg,
       profileImageSrc:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+        "Discovering yoga has been a life-changing journey for me. As a yoga trainee, I've experienced a profound sense of well-being and improved flexibility. The guidance and support of my instructor have made this practice not just a physical exercise but a path to inner peace and self-discovery.",
       customerName: "Charlotte Hale",
-      customerTitle: "CEO, Delos Inc."
+      customerTitle: "Yoga trainer."
     },
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1523952578875-e6bb18b26645?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
+      imageSrc: hiitImg,
       profileImageSrc:
         "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
       quote:
-        "Sinor Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+        "HIIT has pushed me beyond my limits, and the results have been astonishing. I'm a HIIT trainee, and I can't believe how much stronger and more energetic I've become. This training method is a game-changer for those who crave intense workouts and quick, noticeable improvements. I'm hooked!",
       customerName: "Adam Cuppy",
-      customerTitle: "Founder, EventsNYC"
+      customerTitle: "Hiit trainer."
     }
   ];
 

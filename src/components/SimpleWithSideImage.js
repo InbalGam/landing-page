@@ -6,6 +6,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "./Headings.js";
 import { ReactComponent as PlusIcon } from "feather-icons/dist/icons/plus.svg";
 import { ReactComponent as MinusIcon } from "feather-icons/dist/icons/minus.svg";
+import workoutImg from '../images/geert-pieters-3RnkZpDqsEI-unsplash.jpg';
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`;
@@ -39,9 +40,9 @@ const Answer = motion(tw.dd`pointer-events-none text-sm sm:text-base leading-rel
 
 export default ({
   subheading = "",
-  heading = "Questions",
-  description = "Here are some frequently asked questions about our hotels from our loving customers. Should you have any other questions, feel free to reach out via the contact form below.",
-  imageSrc = "https://images.unsplash.com/photo-1579427421635-a0015b804b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
+  heading = "FAQs",
+  description = "Here are some frequently asked questions from our loving customers. Should you have any other questions, feel free to reach out via the contact form below.",
+  imageSrc = workoutImg,
   imageContain = false,
   imageShadow = true,
   faqs = null
@@ -52,24 +53,24 @@ export default ({
    */
   const defaultFaqs = [
     {
-      question: "Is lunch provided free of cost ?",
+      question: "How often should I work out to see results ?",
       answer:
-        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+        "The frequency of your workouts depends on your fitness goals. For general fitness, 3-5 times a week is recommended. For weight loss, consistency is key, so aim for at least 4-6 times a week. However, the most important factor is sustainable consistency and listening to your body."
     },
     {
-      question: "Do you have 2 Bedroom suites ?",
+      question: "What's the best way to stay motivated in a fitness routine ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "Staying motivated can be challenging, but setting clear, achievable goals, tracking your progress, and varying your workouts can help. Additionally, finding a workout buddy, joining group classes, or seeking guidance from a fitness coach can provide motivation and accountability."
     },
     {
-      question: "Are Wi-Fi costs included in the price ?",
+      question: "How should I choose between cardio and strength training ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "The choice between cardio and strength training depends on your fitness goals. Cardio is great for improving cardiovascular health and burning calories, while strength training builds muscle and boosts metabolism. A balanced approach that combines both is often recommended for overall fitness."
     },
     {
-      question: "Where can I reach you for support ?",
+      question: "Can I work out if I have a medical condition or injury ?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "It's essential to consult with a healthcare professional before starting or continuing an exercise routine if you have a medical condition or injury. They can provide guidance on safe exercises and modifications tailored to your specific needs. In many cases, exercise can be beneficial for rehabilitation and overall health, but safety should always be a priority."
     }
   ];
 
