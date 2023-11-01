@@ -27,7 +27,7 @@ const RightColumn = styled.div`
 
 const Content = tw.div`mt-24 lg:mt-24 lg:mb-24 flex flex-col sm:items-center lg:items-stretch`;
 const Heading = tw.h1`text-3xl sm:text-5xl md:text-6xl lg:text-5xl font-black leading-none`;
-const Paragraph = tw.p`max-w-md my-8 lg:my-5 lg:my-8 sm:text-lg lg:text-base xl:text-lg leading-loose`;
+const Paragraph = tw.p`max-w-md my-8 lg:my-8 sm:text-lg lg:text-base xl:text-lg leading-loose`;
 
 const Actions = styled.div`
   ${tw`mb-8 lg:mb-0`}
