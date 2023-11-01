@@ -3,6 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading } from "./Headings.js";
+import gymImg from '../images/risen-wang-20jX9b35r_M-unsplash.jpg';
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -31,34 +32,34 @@ export default ({textOnLeft = false}) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
   //Change the statistics variable as you like, add or delete objects
   const statistics = [
-    {
-      key: "Countries",
-      value: "192",
-    },
-    {
-      key: "Hotels",
-      value: "479",
-    },
-    {
-      key: "Rooms",
-      value: "2093",
-    },
-    {
-      key: "Workers",
-      value: "10347",
-    }
+    // {
+    //   key: "Countries",
+    //   value: "192",
+    // },
+    // {
+    //   key: "Hotels",
+    //   value: "479",
+    // },
+    // {
+    //   key: "Rooms",
+    //   value: "2093",
+    // },
+    // {
+    //   key: "Workers",
+    //   value: "10347",
+    // }
   ]
 
   return (
     <Container>
       <TwoColumn>
         <ImageColumn>
-          <Image imageSrc="https://images.unsplash.com/photo-1582564286939-400a311013a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80" />
+          <Image imageSrc={gymImg} />
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
-            <Heading>We have the best service.</Heading>
-            <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Description>
+            <Heading>We have the best trainers.</Heading>
+            <Description>Our fitness business takes pride in a team of highly qualified trainers and staff who are dedicated to helping our clients achieve their fitness goals. Our trainers bring expertise, motivation, and personalized guidance to every session, ensuring a supportive and results-driven environment for our members.</Description>
             <Statistics>
               {statistics.map((statistic, index) => (
               <Statistic key={index}>
