@@ -6,7 +6,7 @@ import {SectionHeading} from "./Headings.js";
 import {PrimaryButton} from "./Buttons.js";
 
 
-const Container = tw(ContainerBase)`bg-secondary-800 -mx-8`
+const Container = tw(ContainerBase)`bg-blue-800 -mx-8`
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
 const Row = tw.div`flex items-center justify-center flex-col lg:flex-row px-8`
@@ -19,7 +19,7 @@ const Heading = tw(SectionHeading)`text-gray-100 sm:text-left leading-none`
 const Description = tw.p`text-gray-500 font-medium text-sm max-w-sm mt-2 sm:mt-1 text-center sm:text-left`
 
 const Form = tw.form`text-sm max-w-sm sm:max-w-none mx-auto`
-const Input = tw.input`w-full sm:w-auto block sm:inline-block px-6 py-4 rounded bg-secondary-600 tracking-wider font-bold border border-secondary-600 focus:border-secondary-300 focus:outline-none sm:rounded-r-none hover:bg-secondary-500 transition duration-300 text-gray-200`
+const Input = tw.input`w-full sm:w-auto block sm:inline-block px-6 py-4 rounded bg-blue-700 tracking-wider font-bold border border-blue-700 focus:border-blue-300 focus:outline-none sm:rounded-r-none hover:bg-secondary-500 transition duration-300 text-gray-200`
 const Button = tw(PrimaryButton)`w-full sm:w-auto mt-6 sm:mt-0 sm:rounded-l-none py-4 bg-green-500 text-gray-100 hocus:bg-green-700 hocus:text-gray-300 border border-green-500 hocus:border-green-700`
 
 
