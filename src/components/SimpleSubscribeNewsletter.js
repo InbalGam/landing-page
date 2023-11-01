@@ -1,6 +1,6 @@
 import React from "react";
 import tw from "twin.macro";
-import {ReactComponent as EmailNewsletterIconBase } from "../../images/email-newsletter-icon.svg"
+import {ReactComponent as EmailNewsletterIconBase } from "../images/email-newsletter-icon.svg"
 import {Container as ContainerBase } from "./Layouts.js"
 import {SectionHeading} from "./Headings.js";
 import {PrimaryButton} from "./Buttons.js";
