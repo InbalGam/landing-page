@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import AnimationRevealPage from "./components/AnimationRevealPage.js";
+import Hero from "./components/FullWidthWithImage.js";
+import Features from "./components/ThreeColSimple.js";
+import MainFeature from "./components/TwoColSingleFeatureWithStats.js";
+import SliderCard from "./components/ThreeColSlider.js";
+import TrendingCard from "./components/TwoTrendingPreviewCardsWithImage.js";
+import Blog from "./components/PopularAndRecentBlogPosts.js";
+import Testimonial from "./components/TwoColumnWithImageAndProfilePictureReview.js";
+import FAQ from "./components/SimpleWithSideImage.js";
+import SubscribeNewsLetterForm from "./components/SimpleSubscribeNewsletter.js";
+import Footer from "./components/MiniCenteredFooter.js";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AnimationRevealPage>
+    <Hero />
+    <Features />
+    <SliderCard />
+    <TrendingCard />
+    <MainFeature />
+    <Blog />
+    <Testimonial textOnLeft={true}/>
+    <FAQ />
+    <SubscribeNewsLetterForm />
+    <Footer />
+  </AnimationRevealPage>
   );
 }
 
