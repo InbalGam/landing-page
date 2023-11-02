@@ -4,9 +4,6 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { SectionHeading } from "./Headings";
 import { PrimaryButton as PrimaryButtonBase } from "./Buttons";
-import { ReactComponent as PriceIcon } from "feather-icons/dist/icons/dollar-sign.svg";
-import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin.svg";
-import { ReactComponent as StarIcon } from "feather-icons/dist/icons/star.svg";
 import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chevron-left.svg";
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
 import hiitImg from '../images/dylan-nolte-ITDjGji__6Y-unsplash.jpg';
@@ -48,25 +45,8 @@ const TextInfo = tw.div`py-6 sm:px-10 sm:py-6`;
 const TitleReviewContainer = tw.div`flex flex-col sm:flex-row sm:justify-between sm:items-center`;
 const Title = tw.h5`text-2xl font-bold`;
 
-const RatingsInfo = styled.div`
-  ${tw`flex items-center sm:ml-4 mt-2 sm:mt-0`}
-  svg {
-    ${tw`w-6 h-6 text-yellow-500 fill-current`}
-  }
-`;
-const Rating = tw.span`ml-2 font-bold`;
-
 const Description = tw.p`text-sm leading-loose mt-2 sm:mt-4`;
 
-const SecondaryInfoContainer = tw.div`flex flex-col sm:flex-row mt-2 sm:mt-4`;
-const IconWithText = tw.div`flex items-center mr-6 my-2 sm:my-0`;
-const IconContainer = styled.div`
-  ${tw`inline-block rounded-full p-2 bg-gray-700 text-gray-100`}
-  svg {
-    ${tw`w-3 h-3`}
-  }
-`;
-const Text = tw.div`ml-2 text-sm font-semibold text-gray-800`;
 
 const PrimaryButton = tw(PrimaryButtonBase)`mt-auto sm:text-lg w-full rounded sm:rounded-none sm:rounded-br-4xl py-3 sm:py-6`;
 export default () => {
@@ -97,7 +77,7 @@ export default () => {
     {
       imageSrc: hiitImg,
       title: "High-Intensity Interval Training (HIIT)",
-      description: "HIIT workouts involve short bursts of intense exercise followed by brief rest periods. They are known for their efficiency in burning calories, improving cardiovascular fitness, and building strength. HIIT can include exercises like jumping jacks, burpees, and sprints.",
+      description: "HIIT workouts involve short bursts of intense exercise followed by brief rest periods. They are known for their efficiency in burning calories, improving cardiovascular fitness, and building strength.",
     },
     {
       imageSrc: yogaImg,
@@ -112,7 +92,7 @@ export default () => {
     {
       imageSrc: pilatesImg,
       title: "Pilates",
-      description: "Pilates is a low-impact exercise system emphasizing core strength, flexibility, and a strong mind-body connection. It offers a versatile and effective approach to fitness, engaging the entire body and providing benefits like improved posture and reduced back pain.",
+      description: "Pilates is a low-impact exercise system emphasizing core strength, flexibility, and a strong mind-body connection. It offers a versatile and effective approach to fitness, engaging the entire body and providing benefits like improved posture.",
     },
   ]
 
@@ -136,6 +116,7 @@ export default () => {
                 </TitleReviewContainer>
                 <Description>{card.description}</Description>
               </TextInfo>
+              {/* <PrimaryButton>Book Now</PrimaryButton> */}
             </Card>
           ))}
         </CardSlider>
