@@ -40,6 +40,14 @@ const Actions = styled.div`
 `;
 
 export default ({
+  // navLinks = [
+  //   <NavLinks key={1}>
+  //     <NavLink href="#">About</NavLink>
+  //     <NavLink href="#">Blog</NavLink>
+  //     <NavLink href="#">Pricing</NavLink>
+  //     <NavLink href="#">Login</NavLink>
+  //   </NavLinks>
+  // ],
   heading = (
     <>
       Transforming Lives
