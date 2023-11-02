@@ -6,7 +6,6 @@ import { SectionHeading, Subheading as SubheadingBase } from "./Headings.js";
 import { SectionDescription } from "./Typography.js";
 import { Container, ContentWithPaddingXl } from "./Layouts.js";
 import blueStar from "../images/blue-star-icon.png";
-import { ReactComponent as SvgDecoratorBlob3 } from "../images/svg-decorator-blob-3.svg";
 
 const Heading = tw(SectionHeading)``;
 const Subheading = tw(SubheadingBase)`text-center mb-3`;
@@ -43,9 +42,7 @@ const Card = styled.a`
   }
 `;
 
-const DecoratorBlob = styled(SvgDecoratorBlob3)`
-  ${tw`pointer-events-none absolute right-0 bottom-0 w-64 opacity-25 transform translate-x-32 translate-y-40`}
-`;
+
 
 export default ({
   cards = [
@@ -98,7 +95,6 @@ export default ({
           ))}
         </ThreeColumnContainer>
       </ContentWithPaddingXl>
-      <DecoratorBlob />
     </Container>
   );
 };
